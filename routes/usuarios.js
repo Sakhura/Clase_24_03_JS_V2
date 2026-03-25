@@ -3,7 +3,7 @@ const router = express.Router();
 const pool = require('../config/db');  
 
 //POST - Crear un nuevo usuario
-router.post('/usuarios', async (req, res) => {
+router.post('/', async (req, res) => {
     const { nombre, correo } = req.body;
 
     if (!nombre || !correo) {
@@ -27,7 +27,7 @@ router.post('/usuarios', async (req, res) => {
     });
 
     //PUT actualizar correo de un usuario
-router.put('/usuarios/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
     const { id } = req.params;
     const { correo } = req.body;
 
