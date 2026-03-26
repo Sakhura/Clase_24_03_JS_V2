@@ -10,11 +10,11 @@ app.use(express.json());
 
 // Rutas
 const usuariosRoutes = require('./routes/usuarios');
-app.use('/api', usuariosRoutes);
+app.use('/usuarios', usuariosRoutes);
 
-app.get('/', (req, res) => {
-    res.json({ message: 'API activa' });
-});
+//app.get('/', (req, res) => {
+   // res.json({ message: 'API activa' });
+//});
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
