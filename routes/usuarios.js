@@ -19,9 +19,9 @@ router.post('/', async (req, res) => {
     } catch (error) {
 
         if(error.code === '23505') { // Código de error para violación de clave única
-            res.status(409).json({ error: 'El correo ya está registrado' });
+           return res.status(409).json({ error: 'El correo ya está registrado' });
         }
-        res.status(500).json({ error: 'Error interno del servidor' });
+       return res.status(500).json({ error: 'Error interno del servidor' });
     }
        
     });
